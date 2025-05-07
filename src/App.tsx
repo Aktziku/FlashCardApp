@@ -37,17 +37,13 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <IonReactRouter basename="/FlashCardApp">
+    <IonRouterOutlet>
+      <Route exact path="/" component={Home} />
+      <Redirect to="/" />
+    </IonRouterOutlet>
+  </IonReactRouter>
+</IonApp>
 );
 
 export default App;
