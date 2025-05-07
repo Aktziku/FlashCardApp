@@ -10,6 +10,7 @@ export default defineConfig({
     react(),
     legacy()
   ],
+  base: 'FlashCardApp',
   test: {
     globals: true,
     environment: 'jsdom',
